@@ -4,13 +4,16 @@ using System.Collections.Generic;
 
 public class DialogueStateMachine : iStateMachine {
 
-	GameObject NPC;
-	NPC_Behavior npc_behav;
+	public GameObject Player;
+	public GameObject NPC;
 
-	public DialogueStateMachine(string npc_name)
+
+
+	public DialogueStateMachine()
 	{
-		NPC = GameObject.Find (npc_name);
-		npc_behav = NPC.GetComponent <NPC_Behavior>();
+		Player = GameObject.Find ("Player");
+
+
 	}
 
 
@@ -36,14 +39,14 @@ public class DialogueStateMachine : iStateMachine {
 					else
 					{
 						crnt_state = null;
-						npc_behav.converse_gui = false;
+
 						return;
 					}
 				}
 				else
 				{
 					crnt_state = null;
-					npc_behav.converse_gui = false;
+
 					return;
 				}
 			}
@@ -59,7 +62,7 @@ public class DialogueStateMachine : iStateMachine {
 	 * represents the dialogue between the player and NPC.  This state graph
 	 * is handed to the DialogueStateMachine to begin processing the graph.
 	 */ 
-	public void LoadNPCstateGraph(string NPC_tag)
+	public void createDialogStateGraph(string NPC_tag)
 	{
 		crnt_graph = new StateGraph ();
 

@@ -4,7 +4,7 @@ using System.Collections;
 public class iState {
 
 	public bool state_process;
-
+	
 	public int  state_id;
 	public int  next_state_id;
 

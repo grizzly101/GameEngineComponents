@@ -1,17 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogueStateMachine.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogTransition.cs">
     <Files>
-      <File FileName="Assets\Fuzion Assets\Scripts\Event Manager\EventManager.cs" Line="72" Column="28" />
-      <File FileName="Assets\Fuzion Assets\Scripts\GameStateManager.cs" Line="4" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\NPC_Behavior.cs" Line="24" Column="3" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogueState.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Event Manager\EventManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fuzion Assets\Scripts\GameStateManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fuzion Assets\Scripts\NPC_Behavior.cs" Line="1" Column="1" />
       <File FileName="Assets\Fuzion Assets\Scripts\DemoHallway\Interactions.cs" Line="1" Column="1" />
       <File FileName="Assets\Fuzion Assets\Scripts\Event Manager\DialogEventArgs.cs" Line="1" Column="1" />
       <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogueStateMachine.cs" Line="21" Column="3" />
       <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogManager.cs" Line="21" Column="3" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogueState.cs" Line="50" Column="36" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\iState.cs" Line="9" Column="28" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogueState.cs" Line="24" Column="1" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\iState.cs" Line="7" Column="2" />
       <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\StateGraph.cs" Line="12" Column="4" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogTransition.cs" Line="11" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

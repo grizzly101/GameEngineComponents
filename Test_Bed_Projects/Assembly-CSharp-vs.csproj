@@ -53,6 +53,7 @@
      <Compile Include="Assets\Fuzion Assets\Scripts\DemoHallway\Interactions.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\DemoHallway\PlayerRaycast.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogManager.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogTransition.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogueState.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogueStateMachine.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\InitialState.cs" />

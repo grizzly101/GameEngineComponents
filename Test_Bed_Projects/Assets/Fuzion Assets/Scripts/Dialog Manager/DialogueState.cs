@@ -11,8 +11,13 @@ public class DialogueState : iState {
 	//Contains an indexed list of the children the state can transition too
 	List<int> child_states;
 
+	//Contains the set of transitions this state node can use to move to a next node
+	List<DialogTransition> state_transitions;
+
 	//handle to its own state graph
-	StateGraph my_state_graph;
+	DialogStateGraph my_state_graph;
+
+	float audio_clip_timer;
 
 
 
@@ -27,18 +32,26 @@ public class DialogueState : iState {
 	
 	public override bool inProcess()
 	{
-
+		if(audio_clip_timer != 0)
+		{
+			my_state_graph.NPC.GetComponent<npc_behav>().m_mouth.Play ();
+			audio_clip_timer -= Time.deltaTime;
+		}
+		else
+		{
+			state_process = false;
+		}
 		return state_process; 
 	}
 	
 	public override void onEnter()
 	{
 		state_process = true;
-
-	//	npc_behav.m_voice =  Resources.Load("Unicorn") as AudioClip;
-	//	npc_behav.m_mouth.clip = npc_behav.m_voice;
-	//	npc_behav.m_mouth.Play ();
-
+	
+		my_state_graph.NPC.GetComponent<npc_behav>().m_voice =  Resources.Load("Unicorn") as AudioClip;
+		my_state_graph.NPC.GetComponent<npc_behav>().m_mouth.clip = npc_behav.m_voice;
+		audio_clip_timer = my_state_graph.NPC.GetComponent<npc_behav>.m_voice.length;
+	
 	}
 	
 	public override void onExit()

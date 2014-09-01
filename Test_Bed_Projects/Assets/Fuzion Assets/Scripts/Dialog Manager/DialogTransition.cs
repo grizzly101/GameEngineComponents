@@ -8,13 +8,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-namespace AssemblyCSharp
+using System.Collections.Generic;
+
+public struct FuzionTuple<T>
 {
-		public class DialogTransition
-		{
-				public DialogTransition ()
-				{
-				}
-		}
+	string key;
+	  T    value;
 }
+
+public class DialogTransition : FuzionEventArg
+{
+
+	int from_stateID;
+	int to_stateID;
+
+	List<FuzionTuple<T>> args;
+
+	public DialogTransition(int from_stateID,int to_stateID, List<FuzionTuple<T>> _args)
+	{
+		args = _args;
+	}
+}
+
 
