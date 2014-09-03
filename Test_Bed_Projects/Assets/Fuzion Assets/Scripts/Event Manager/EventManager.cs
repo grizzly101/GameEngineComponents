@@ -37,6 +37,11 @@ public class EventManager : MonoBehaviour, PlayerEventHandlerInterface, AIEventH
 	/**Used by Event Manager to create a dictionary that stores Players events and registered listeners*/
 	PlayerEvents player_events;
 
+
+	//Game Manager Handle
+	public GameStateManager game_manager;
+	public DialogManager dialog_manager;
+
 	//Register all game events
 	void Start()
 	{
@@ -44,7 +49,8 @@ public class EventManager : MonoBehaviour, PlayerEventHandlerInterface, AIEventH
 		player_handler = GameObject.Find ("Player");
 		player_events = new PlayerEvents (0);
 	    registerPlayerEventsAndListeners ();
-		
+		game_manager =  GetComponent<GameStateManager>() as GameStateManager;
+		dialog_manager = GetComponent<DialogManager> () as DialogManager;
 
 	}
 
@@ -70,7 +76,8 @@ public class EventManager : MonoBehaviour, PlayerEventHandlerInterface, AIEventH
 	public void DialogEventHandler(FuzionEventArg arg)
 	{
 		Debug.Log ("Event Manager Dialog Handler Called");
-		((DialogEventArg)arg).npc_character.SendMessage("interact");
+		//((DialogEventArg)arg).npc_character.SendMessage("interact");
+		dialog_manager.createConversationFromEventArg((DialogEventArg)arg);
 	}
 	public void OpenEventHandler(FuzionEventArg arg)
 	{

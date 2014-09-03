@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public struct conversation
 {
 	public DialogueStateMachine state_machine;
-	public StateGraph			 dialog_graph;
+	public DialogStateGraph			 dialog_graph;
 }
 
 
@@ -45,7 +45,7 @@ public class DialogManager : MonoBehaviour {
 		newConverse.state_machine.NPC = arg.npc_character;
 
 		//(2) Define state graph from xml or yaml
-		newConverse.dialog_graph = newConverse.state_machine.createDialogStateGraph ();
+		newConverse.dialog_graph = newConverse.state_machine.createDialogStateGraph (arg.npc_character.name);
 		//(3) add conversation to the list
 		converse_list.Add (newConverse);
 	}

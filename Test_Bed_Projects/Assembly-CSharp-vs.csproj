@@ -53,13 +53,14 @@
      <Compile Include="Assets\Fuzion Assets\Scripts\DemoHallway\Interactions.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\DemoHallway\PlayerRaycast.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogManager.cs" />
-     <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogTransition.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogStateGraph.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogueState.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogueStateMachine.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\InitialState.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\StateGraph.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\iState.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\iStateMachine.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Dialog Manager\iTransition.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Event Manager\DialogEventArgs.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Event Manager\EventHandlerInterface.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Event Manager\EventManager.cs" />

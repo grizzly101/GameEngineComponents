@@ -9,7 +9,9 @@ public class DialogStateGraph: StateGraph {
 	public GameObject Player;
 	public GameObject NPC;
 	
-	
+	public DialogStateGraph()
+	{
+	}
 	
 }
 

@@ -7,7 +7,7 @@ public class DialogueStateMachine : iStateMachine {
 	public GameObject Player;
 	public GameObject NPC;
 
-
+	DialogStateGraph crnt_dsg;
 
 	public DialogueStateMachine()
 	{
@@ -62,20 +62,30 @@ public class DialogueStateMachine : iStateMachine {
 	 * represents the dialogue between the player and NPC.  This state graph
 	 * is handed to the DialogueStateMachine to begin processing the graph.
 	 */ 
-	public void createDialogStateGraph(string NPC_tag)
+	public DialogStateGraph createDialogStateGraph(string NPC_tag)
 	{
-		crnt_graph = new StateGraph ();
+		crnt_graph = new DialogStateGraph ();
+		crnt_graph.NPC = GameObject.Find (NPC_tag);
+		crnt_graph.state_list = new List<DialogueState> ();
 
-		crnt_graph.state_list = new List<iState> ();
-		//pass in NPC object reference and stateID
-		crnt_graph.state_list.Add (new InitialState(NPC,0));
-		crnt_graph.state_list.Add (new DialogueState(NPC,1));
+		List<AudioClip> initialList = new List<AudioClip> ();
+		initialList.Add ((AudioClip)Resources.Load("Unicorn", typeof(AudioClip))); 
+		initialList.Add ((AudioClip)Resources.Load("key_master", typeof(AudioClip)));
+		DialogueState initialState = new DialogueState(0,null,initialList, crnt_graph);
+
+		List<AudioClip> secondList = new List<AudioClip> ();
+		secondList.Add ((AudioClip)Resources.Load("key_master", typeof(AudioClip)));
+		secondList.Add ((AudioClip)Resources.Load("Unicorn", typeof(AudioClip))); 
+		DialogueState secondState = new DialogueState(1,null,secondList,crnt_graph);
+
+		crnt_graph.state_list.Add (initialState);
+		crnt_graph.state_list.Add (secondState);
 	
 
 		//Assign the first state in the list to the State Machine for processing
 		crnt_state = crnt_graph.state_list[0];
 		crnt_state.onEnter ();
 
-
+		return crnt_graph;
 	}
 }
