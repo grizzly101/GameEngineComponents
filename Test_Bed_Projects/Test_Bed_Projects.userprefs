@@ -1,20 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogTransition.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Fuzion Assets\Scripts\Frog AI\AnimateTree.cs">
     <Files>
-      <File FileName="Assets\Fuzion Assets\Scripts\Event Manager\DialogEventArgs.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogueState.cs" Line="21" Column="2" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Frog AI\FrogState.cs" Line="17" Column="50" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Frog AI\Behaviors.cs" Line="31" Column="21" />
       <File FileName="Assets\Fuzion Assets\Scripts\Event Manager\EventManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\GameStateManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\NPC_Behavior.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\DemoHallway\Interactions.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Event Manager\DialogEventArgs.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogueStateMachine.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\iState.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\StateGraph.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogTransition.cs" Line="17" Column="2" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Dialog Manager\DialogStateGraph.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Generic State Machine\state.cs" Line="20" Column="5" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Frog AI\AnimateTree.cs" Line="7" Column="24" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Frog AI\SpeakTree.cs" Line="6" Column="2" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\Task.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
