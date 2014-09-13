@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Bow.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\BehaviorTree.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\SelectorNode.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\SequenceNode.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Task.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\DemoHallway\DemoProps\Clock_Behaviour.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\DemoHallway\DemoProps\Hook_Behaviour.cs" />
@@ -144,6 +146,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlurEffectConeTaps.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CameraMotionBlur.shader" />
+     <None Include="Assets\Fuzion Assets\Models\Frog\Frog Readme.txt" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrainDX11.shader" />

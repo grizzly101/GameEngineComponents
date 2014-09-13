@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class BehaviorTree : MonoBehaviour {
+public class BehaviorTree {
 
-	// Use this for initialization
-	void Start () {
-	
+	Queue<Task> task_tree;
+
+
+	public BehaviorTree()
+	{
+		task_tree = new Queue<Task> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }

@@ -3,13 +3,12 @@ using System.Collections;
 
 public class Task : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public Task()
+	{
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public virtual bool run()
+	{
+		return true;
 	}
 }
