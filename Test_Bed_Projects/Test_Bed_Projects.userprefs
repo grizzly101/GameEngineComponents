@@ -1,18 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Fuzion Assets\Scripts\Behavior Tree\Task.cs">
     <Files>
+      <File FileName="..\RoseRedDemo\RoseRedDemo.sln" Line="1" Column="1" />
+      <File FileName="..\RoseRedDemo\Assets\OVR\Scripts\OVRCameraController.cs" Line="1" Column="1" />
       <File FileName="Assets\Fuzion Assets\Scripts\GameStateManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Frog AI\FrogState.cs" Line="9" Column="30" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Frog AI\FrogState.cs" Line="1" Column="1" />
       <File FileName="Assets\Fuzion Assets\Scripts\Frog AI\Behaviors.cs" Line="1" Column="1" />
       <File FileName="Assets\Fuzion Assets\Scripts\Event Manager\EventManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Fuzion Assets\Scripts\Generic State Machine\state.cs" Line="1" Column="1" />
       <File FileName="Assets\Fuzion Assets\Scripts\Frog AI\AnimateTree.cs" Line="1" Column="1" />
       <File FileName="Assets\Fuzion Assets\Scripts\Frog AI\SpeakTree.cs" Line="1" Column="1" />
       <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\Task.cs" Line="15" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\BehaviorTree.cs" Line="8" Column="2" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\SelectorNode.cs" Line="7" Column="2" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\SequenceNode.cs" Line="5" Column="33" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\BehaviorTree.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\SelectorNode.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\SequenceNode.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
