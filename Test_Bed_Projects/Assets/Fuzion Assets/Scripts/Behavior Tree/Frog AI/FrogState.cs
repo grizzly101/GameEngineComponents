@@ -6,6 +6,8 @@ public class FrogState : State {
 	public BehaviorTree crnt_tree;
 	public BehaviorTree prev_tree;
 
+	public float  timer;
+
 	public FrogState(int id):base(id)
 	{
 		crnt_tree = null;

@@ -48,8 +48,16 @@
   <ItemGroup>
      <Compile Include="Assets\Bow.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\BehaviorTree.cs" />
-     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\SelectorNode.cs" />
-     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\SequenceNode.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\DecoratorTask.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogAnimDecorator.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogAnimateTask.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogCognition.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogState.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogTalkDecorator.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogTalkTask.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\NPC_State.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\SelectorTask.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\SequenceTask.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Task.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\DemoHallway\DemoProps\Clock_Behaviour.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\DemoHallway\DemoProps\Hook_Behaviour.cs" />
@@ -69,15 +77,10 @@
      <Compile Include="Assets\Fuzion Assets\Scripts\Event Manager\EventHandlerInterface.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Event Manager\EventManager.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Event Manager\FuzionEventArgs.cs" />
-     <Compile Include="Assets\Fuzion Assets\Scripts\Frog AI\AnimateTree.cs" />
-     <Compile Include="Assets\Fuzion Assets\Scripts\Frog AI\Behaviors.cs" />
-     <Compile Include="Assets\Fuzion Assets\Scripts\Frog AI\FrogState.cs" />
-     <Compile Include="Assets\Fuzion Assets\Scripts\Frog AI\SpeakTree.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\GUI\HintDisplay.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\GameStateManager.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Generic State Machine\state.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Inventory Management\InventoryItem.cs" />
-     <Compile Include="Assets\Fuzion Assets\Scripts\NPC_Behavior.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Player Controls\CharacterMotorC.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Player Controls\FPSInputControllerC.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Player Controls\MouseLook.cs" />

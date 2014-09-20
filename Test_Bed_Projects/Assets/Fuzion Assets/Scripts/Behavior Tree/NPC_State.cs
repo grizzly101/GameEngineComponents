@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-public class NPC_Behavior : MonoBehaviour {
+public class NPC_State : MonoBehaviour {
 
 	private Animator anim;
 	private AnimatorStateInfo crntBaseState;

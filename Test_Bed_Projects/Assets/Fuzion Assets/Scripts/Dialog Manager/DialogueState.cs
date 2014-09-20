@@ -43,9 +43,9 @@ public class DialogueState : iState {
 			{
 				clip_index +=1;
 				audio_clip_timer = speech_clips[clip_index].length;
-				my_state_graph.NPC.GetComponent<NPC_Behavior> ().m_voice = speech_clips [clip_index];
-				my_state_graph.NPC.GetComponent<NPC_Behavior>().m_mouth.clip = my_state_graph.NPC.GetComponent<NPC_Behavior> ().m_voice;
-				my_state_graph.NPC.GetComponent<NPC_Behavior>().m_mouth.Play ();
+				my_state_graph.NPC.GetComponent<NPC_State> ().m_voice = speech_clips [clip_index];
+				my_state_graph.NPC.GetComponent<NPC_State>().m_mouth.clip = my_state_graph.NPC.GetComponent<NPC_State> ().m_voice;
+				my_state_graph.NPC.GetComponent<NPC_State>().m_mouth.Play ();
 
 			}
 			else
@@ -61,11 +61,11 @@ public class DialogueState : iState {
 	{
 		state_process = true;
 	
-		my_state_graph.NPC.GetComponent<NPC_Behavior> ().m_voice = speech_clips [clip_index];
-		my_state_graph.NPC.GetComponent<NPC_Behavior>().m_mouth.clip = my_state_graph.NPC.GetComponent<NPC_Behavior> ().m_voice;
+		my_state_graph.NPC.GetComponent<NPC_State> ().m_voice = speech_clips [clip_index];
+		my_state_graph.NPC.GetComponent<NPC_State>().m_mouth.clip = my_state_graph.NPC.GetComponent<NPC_State> ().m_voice;
 		audio_clip_timer = speech_clips [clip_index].length;
 
-		my_state_graph.NPC.GetComponent<NPC_Behavior>().m_mouth.Play ();
+		my_state_graph.NPC.GetComponent<NPC_State>().m_mouth.Play ();
 	}
 	
 	public override void onExit()

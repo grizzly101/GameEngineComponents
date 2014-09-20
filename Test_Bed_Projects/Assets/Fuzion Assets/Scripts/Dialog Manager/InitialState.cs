@@ -4,14 +4,14 @@ using System.Collections;
 public class InitialState : iState  {
 
 	GameObject npc_ref;
-	NPC_Behavior npc_behav;
+	NPC_State npc_behav;
 	bool		select_option;
 
 	public InitialState(GameObject npc, int stateID)
 	{
 		state_process = true;
 		npc_ref = npc;
-		npc_behav = npc_ref.GetComponent <NPC_Behavior>();
+		npc_behav = npc_ref.GetComponent <NPC_State>();
 		next_state_id = -1;
 		state_id = stateID;
 		select_option = false;

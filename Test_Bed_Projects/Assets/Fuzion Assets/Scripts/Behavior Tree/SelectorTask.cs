@@ -2,30 +2,30 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class SequenceNode : Task {
-
+public class SelectorTask : Task {
 	Queue<Task> child_queue;
+
 	
-	
-	public SequenceNode()
+	public SelectorTask(BehaviorTree parentTree):base(parentTree)
 	{
 		child_queue = new Queue<Task> ();
 	}
-	
-	
-	
+
+
+
 	public bool	run()
 	{
 		do
 		{
 			Task tChild = child_queue.Dequeue();
-			if ((tChild.run()))
+			if (tChild.run())
 			{
-				return false;
+				return true;
 			}
-		}
+		 }
 		while(child_queue.Count >0);
-			
-	  return true;
+	
+	 return false;
 	}
+
 }
