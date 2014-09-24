@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 public class NPC_State : MonoBehaviour {
 
-	private Animator anim;
-	private AnimatorStateInfo crntBaseState;
-	private AnimatorStateInfo layer2CrntState;
+	public Animator anim;
+	public AnimatorStateInfo crntBaseState;
+	public AnimatorStateInfo layer2CrntState;
 	public DialogueStateMachine dial_manager;
 	public AudioClip	m_voice;
 	public AudioSource  m_mouth;

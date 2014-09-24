@@ -35,7 +35,7 @@ public class FrogCognition : MonoBehaviour {
 		//Assign handle to AI GameObject
 		frog_object = GameObject.Find("TheFrogBase");
 		//Handle to NPC_State Component of AI GameObject
-		NPC_State frog_state = frog_object.GetComponent<NPC_State>() as NPC_State;
+		frog_state = frog_object.GetComponent<NPC_State>() as NPC_State;
 
 		//Define States
 		idle   =  new FrogState ((int)state_id.IDLE);
@@ -45,13 +45,28 @@ public class FrogCognition : MonoBehaviour {
 		/***Define Behavior Trees and store in dictionary***/
 		tree_dict = new Dictionary<string,BehaviorTree> ();
 
-		//Temporary and for testing only
+		/****Temporary and for testing only*****
+		 * (1) Create the behavior tree
+		 * (2) Create tasks to add to the behavior tree
+		 * (3) Add the tasks to the behavior tree
+		*/
 		BehaviorTree idle_behavior = new BehaviorTree (this);
+
+		//Building tree from bottom up
+		Task idleFrog = new FrogAnimateTask (idle_behavior);
+		DecoratorTask idleDecorator = new FrogAnimDecorator (idle_behavior, idleFrog, 3);
+		SelectorTask firstSelectNode = new SelectorTask (idle_behavior);
+		firstSelectNode.child_list.Add (idleDecorator);
+
+		idle_behavior.task_tree.Add (firstSelectNode);
+
+
 		tree_dict.Add ("idle_behavior", idle_behavior);
 
 		//Assign behavior trees to states
 		idle.crnt_tree = tree_dict ["idle_behavior"];
 		crnt_state = idle;
+		nxt_state = idle;
 	}
 	
 	// Update is called once per frame.  Implements a State Machine Processor
@@ -59,21 +74,24 @@ public class FrogCognition : MonoBehaviour {
 	{
 		if(crnt_state.getID() != nxt_state.getID())
 		{
-			//Debug.Log("OnEnter");
+			Debug.Log("OnEnter");
 			crnt_state = nxt_state;
-			crnt_state.on_enter();
+			//crnt_state.on_enter();
+			crnt_state.onEnter ();
 			
 		}
 		
-		if(crnt_state.getFinFlag() == false)
+		if(crnt_state.onProcess ())//crnt_state.getFinFlag() == false)
 		{
-			//Debug.Log("Process");
-			crnt_state.on_process();
+			Debug.Log("Process");
+			//crnt_state.on_process();
+			//crnt_state.onProcess ();
 		}
 		else
 		{
-			//Debug.Log ("exit");
-			crnt_state.on_exit();
+			Debug.Log ("exit");
+			//crnt_state.on_exit();
+			crnt_state.onExit ();
 		}
 	}
 }

@@ -13,7 +13,7 @@ public class State {
 	string state_animation;
 	bool   state_finished;
 
-	public delegate void StateMethod();
+	public delegate bool StateMethod();
 
 	//Handler functions for processing the state
 	public StateMethod on_enter;
@@ -75,4 +75,18 @@ public class State {
 		return state_finished;
 	}
 
+	public virtual bool onProcess()
+	{
+		return on_process();
+	}
+
+	public virtual bool onEnter()
+	{
+		return on_enter();
+	}
+
+	public virtual bool onExit()
+	{
+		return on_exit();
+	}
 }

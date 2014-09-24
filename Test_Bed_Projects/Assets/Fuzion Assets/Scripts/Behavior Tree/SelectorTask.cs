@@ -3,28 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class SelectorTask : Task {
-	Queue<Task> child_queue;
+
+	public List<Task> child_list;
 
 	
 	public SelectorTask(BehaviorTree parentTree):base(parentTree)
 	{
-		child_queue = new Queue<Task> ();
+		child_list = new List<Task> ();
 	}
 
 
 
-	public bool	run()
+	public override bool	run()
 	{
-		do
+		Debug.Log ("SelectorTask.Run()");
+		foreach(Task tChild in child_list)
 		{
-			Task tChild = child_queue.Dequeue();
 			if (tChild.run())
 			{
+				Debug.Log ("SelectorTask.Child.Run()");
 				return true;
 			}
 		 }
-		while(child_queue.Count >0);
-	
+			
 	 return false;
 	}
 

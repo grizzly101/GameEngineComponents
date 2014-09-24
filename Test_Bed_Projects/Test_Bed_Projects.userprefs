@@ -1,21 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Fuzion Assets\Scripts\NPC_Behavior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogAnimDecorator.cs">
     <Files>
-      <File FileName="Assets\Fuzion Assets\Scripts\NPC_Behavior.cs" Line="39" Column="58" />
-      <File FileName="..\RoseRedDemo\RoseRedDemo.sln" Line="1" Column="1" />
-      <File FileName="..\RoseRedDemo\Assets\OVR\Scripts\OVRCameraController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\GameStateManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Frog AI\FrogState.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Frog AI\Behaviors.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Event Manager\EventManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Generic State Machine\state.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Frog AI\AnimateTree.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Frog AI\SpeakTree.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\Task.cs" Line="8" Column="3" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\BehaviorTree.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\SelectorNode.cs" Line="1" Column="1" />
-      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\SequenceNode.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogAnimateTask.cs" Line="16" Column="66" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\NPC_State.cs" Line="12" Column="14" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogCognition.cs" Line="38" Column="3" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\BehaviorTree.cs" Line="13" Column="3" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\Task.cs" Line="15" Column="1" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogAnimDecorator.cs" Line="27" Column="66" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogState.cs" Line="18" Column="1" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\DecoratorTask.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\SelectorTask.cs" Line="24" Column="44" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Behavior Tree\SequenceTask.cs" Line="17" Column="9" />
+      <File FileName="Assets\Fuzion Assets\Scripts\Generic State Machine\state.cs" Line="42" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

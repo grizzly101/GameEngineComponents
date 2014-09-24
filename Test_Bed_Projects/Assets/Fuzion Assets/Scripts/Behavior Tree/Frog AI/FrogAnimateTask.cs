@@ -6,10 +6,14 @@ public class FrogAnimateTask : Task {
 
 	public FrogAnimateTask(BehaviorTree parentTree):base(parentTree)
 	{
+		parent_tree = parentTree;
 	}
 
-	public bool run()
+	public override bool run()
 	{
+		Debug.Log ("FrogAnimateTask.Run()");
+		//BehaviorTree->CogModel->NPC_State->MecanimStateMachine->data
+		parent_tree.cog_model.frog_state.anim.SetBool ("is_idle",true);
 		return true;
 	}
 }

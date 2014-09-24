@@ -3,18 +3,30 @@ using System.Collections;
 
 public class FrogAnimDecorator : DecoratorTask {
 
-	public FrogAnimDecorator(BehaviorTree parentTree):base(parentTree)
+	float timer;
+
+	public FrogAnimDecorator(BehaviorTree parentTree,Task childTask, float timeUntilTalk):base(parentTree)
 	{
+		parent_tree = parentTree;
+		timer = timeUntilTalk;
+		child_task = childTask;
+	
 	}
 
-	public bool	run()
+	public override bool run()
 	{
-				
-		if (child_task.run ()) {
+		Debug.Log ("FrogAnimateDecorator.Run()");
+		child_task.run ();
+
+
+		if (timer > 0) {
+			 timer =  timer - Time.deltaTime;
 			return true;
 		} else
+		{
+			parent_tree.cog_model.frog_state.anim.SetBool ("is_idle",false);
 			return false;
-		
+		}
 		
 	}
 }
