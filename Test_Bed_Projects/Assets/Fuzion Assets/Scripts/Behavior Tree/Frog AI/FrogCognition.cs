@@ -53,10 +53,12 @@ public class FrogCognition : MonoBehaviour {
 		BehaviorTree idle_behavior = new BehaviorTree (this);
 
 		//Building tree from bottom up
+		Task jumpForwardFrog = new FrogJumpForwardTask (idle_behavior);
 		Task idleFrog = new FrogAnimateTask (idle_behavior);
 		DecoratorTask idleDecorator = new FrogAnimDecorator (idle_behavior, idleFrog, 3);
 		SelectorTask firstSelectNode = new SelectorTask (idle_behavior);
 		firstSelectNode.child_list.Add (idleDecorator);
+		firstSelectNode.child_list.Add (jumpForwardFrog);
 
 		idle_behavior.task_tree.Add (firstSelectNode);
 

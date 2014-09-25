@@ -52,6 +52,7 @@
      <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogAnimDecorator.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogAnimateTask.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogCognition.cs" />
+     <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogJumpForwardTask.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogState.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogTalkDecorator.cs" />
      <Compile Include="Assets\Fuzion Assets\Scripts\Behavior Tree\Frog AI\FrogTalkTask.cs" />

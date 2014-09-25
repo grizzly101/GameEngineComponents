@@ -15,6 +15,9 @@ public class NPC_State : MonoBehaviour {
 
 	public converse	converse_callback; 
 
+	public float move_speed;
+	public Vector3 move_direction;
+
    	void Start()
 	{
 		anim = GetComponent<Animator>();
@@ -46,6 +49,8 @@ public class NPC_State : MonoBehaviour {
 			print ("up");
 		}
 
+		rigidbody.MovePosition (rigidbody.position + (move_speed * move_direction) * Time.deltaTime);
+
 	}
 
 	void OnAnimatorMove()
@@ -53,12 +58,13 @@ public class NPC_State : MonoBehaviour {
 
 	}
 
+	void moveCharacter(float speed, Vector3 direction)
+	{
+		move_speed = speed;
+		move_direction = direction;
+	}
 
 
-
-
-
-	
 	
 }
   

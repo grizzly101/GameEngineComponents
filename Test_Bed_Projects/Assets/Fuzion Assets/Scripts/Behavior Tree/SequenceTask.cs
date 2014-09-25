@@ -14,7 +14,7 @@ public class SequenceTask : Task {
 	
 	
 	
-	public bool	run()
+	public override bool	run()
 	{
 		foreach(Task tChild in child_list)
 		{
