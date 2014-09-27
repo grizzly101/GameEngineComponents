@@ -18,20 +18,33 @@ public class FrogState : State {
 	public bool onProcess()
 	{
 		//processes tasks in the current behavior tree crnt_tree
-		foreach(Task tNode in crnt_tree.task_tree)
+
+		/*Continue where the tree left off if necessary.  Determined by a decorator task.
+		 *This delegate provides a "until" capability not possible with behavior trees and unity's update().
+		 */
+		if(crnt_tree.task_handler != null)
 		{
-			if(tNode.run())
+			crnt_tree.task_handler();
+			return true;
+		}
+		else
+		{
+			foreach(Task tNode in crnt_tree.task_tree)
 			{
-				Debug.Log ("running task from onProcess()");
-				return true;
+				if(tNode.run())
+				{
+					Debug.Log ("running task from onProcess()");
+					return true;
+				}
 			}
 		}
-
+		
 		return false;
 	}
 
 	public bool onExit()
 	{
+		crnt_tree.task_tree.Clear ();
 		return true;
 	}
 

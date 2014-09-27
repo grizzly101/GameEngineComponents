@@ -6,7 +6,8 @@ public class SelectorTask : Task {
 
 	public List<Task> child_list;
 
-	
+
+
 	public SelectorTask(BehaviorTree parentTree):base(parentTree)
 	{
 		child_list = new List<Task> ();

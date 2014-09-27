@@ -52,15 +52,27 @@ public class FrogCognition : MonoBehaviour {
 		*/
 		BehaviorTree idle_behavior = new BehaviorTree (this);
 
+		//root
+		SelectorTask rootNode = new SelectorTask (idle_behavior);
 		//Building tree from bottom up
-		Task jumpForwardFrog = new FrogJumpForwardTask (idle_behavior);
-		Task idleFrog = new FrogAnimateTask (idle_behavior);
-		DecoratorTask idleDecorator = new FrogAnimDecorator (idle_behavior, idleFrog, 3);
-		SelectorTask firstSelectNode = new SelectorTask (idle_behavior);
-		firstSelectNode.child_list.Add (idleDecorator);
-		firstSelectNode.child_list.Add (jumpForwardFrog);
 
-		idle_behavior.task_tree.Add (firstSelectNode);
+		//Child One of root and its children
+		SequenceTask idleSequence = new SequenceTask (idle_behavior);
+		Task idleFrogAnimate = new FrogAnimateTask (idle_behavior,"is_idle");
+		Task idleFrogTalk = new FrogTalkTask (idle_behavior,"hummingSong_uhThing");
+		DecoratorTask frogTalkDecorator = new FrogTalkDecorator (idle_behavior, idleFrogTalk);
+		idleSequence.child_list.Add (idleFrogAnimate);
+		idleSequence.child_list.Add (frogTalkDecorator);
+		 
+		//Child Two of root and its children
+		SelectorTask selectorNode = new SelectorTask (idle_behavior);
+		Task jumpForwardFrog = new FrogJumpForwardTask (idle_behavior);
+		selectorNode.child_list.Add (jumpForwardFrog);
+
+		rootNode.child_list.Add (idleSequence);
+		rootNode.child_list.Add (selectorNode);
+
+		idle_behavior.task_tree.Add (rootNode);
 
 
 		tree_dict.Add ("idle_behavior", idle_behavior);

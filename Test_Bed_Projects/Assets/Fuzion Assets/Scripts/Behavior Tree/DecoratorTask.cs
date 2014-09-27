@@ -11,6 +11,14 @@ public class DecoratorTask : Task {
 		child_task = null;
 	}
 	
+	public void assignDelegate()
+	{
+		parent_tree.task_handler += run;
+	}
 
+	public void removeDelegate()
+	{
+		parent_tree.task_handler -= run;
+	}
 	
 }

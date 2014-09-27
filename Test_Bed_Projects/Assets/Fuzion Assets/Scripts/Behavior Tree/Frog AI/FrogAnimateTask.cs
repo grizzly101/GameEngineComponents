@@ -1,22 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+/*This task simply sets a mecanim transistion flag so the animate controller on the frog 
+ * transistions to the animation we want played on the frog.*/
 public class FrogAnimateTask : Task {
 
-	float tParam;
-	public FrogAnimateTask(BehaviorTree parentTree):base(parentTree)
+
+	string mecanim_transistion;
+
+	public FrogAnimateTask(BehaviorTree parentTree, string mecanimTransistion):base(parentTree)
 	{
 		parent_tree = parentTree;
-		tParam = 0;
+
+		mecanim_transistion = mecanimTransistion;
 	}
 
 	public override bool run()
 	{
 		Debug.Log ("FrogAnimateTask.Run()");
 		//BehaviorTree->CogModel->NPC_State->MecanimStateMachine->data
-		tParam = tParam + Time.deltaTime;
-		parent_tree.cog_model.frog_state.anim.SetBool ("is_idle",true);
-		parent_tree.cog_model.frog_state.anim.SetFloat ("jump_threshold",tParam);
+
+		parent_tree.cog_model.frog_state.anim.SetBool (mecanim_transistion,true);
+
 		return true;
 	}
 }

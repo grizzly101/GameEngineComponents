@@ -2,19 +2,40 @@
 using System.Collections;
 
 public class FrogTalkDecorator : DecoratorTask {
-	
-	public FrogTalkDecorator(BehaviorTree parentTree):base(parentTree)
+
+	bool run_once;
+	float talk_timer;
+	public FrogTalkDecorator(BehaviorTree parentTree, Task childTask):base(parentTree)
 	{
+		child_task = childTask;
+		run_once = false;
+
 	}
 	
-	public bool	run()
+	public override bool run()
 	{
-		
-		if (child_task.run ()) {
+		Debug.Log ("FrogTalkDecorator.run");
+
+		if(run_once == false)
+		{
+			child_task.run ();
+			assignDelegate ();
+			run_once = true;
 			return true;
-		} else
+		}
+
+		if(parent_tree.cog_model.frog_state.m_mouth.isPlaying)
+		{
+			Debug.Log("FrogTalkDecorator: is playing");
+			return true;
+		}
+		else
+		{
+			Debug.Log("FrogTalkDecorator: removing delegate");
+			parent_tree.cog_model.frog_state.anim.SetBool ("talk_now",false);
+			parent_tree.cog_model.frog_state.anim.SetBool ("is_idle",false);
+			removeDelegate();
 			return false;
-		
-		
+		}
 	}
 }

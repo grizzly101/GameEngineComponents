@@ -8,6 +8,8 @@ public class BehaviorTree {
 
 	public List<Task> task_tree;
 
+	public delegate bool run_delegate();
+	public run_delegate  task_handler;
 
 	public BehaviorTree(FrogCognition cogModel)
 	{
@@ -15,5 +17,6 @@ public class BehaviorTree {
 
 		task_tree = new List<Task> ();
 	}
+
 
 }

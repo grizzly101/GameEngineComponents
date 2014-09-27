@@ -18,18 +18,20 @@ public class NPC_State : MonoBehaviour {
 	public float move_speed;
 	public Vector3 move_direction;
 
+	//State Flags
+	public bool is_talking;
+
    	void Start()
-	{
+	{  
+		is_talking = false;
 		anim = GetComponent<Animator>();
 		if(anim.layerCount == 2)
 		{
 			anim.SetLayerWeight(1,1);
 		}
 		m_mouth = this.gameObject.AddComponent<AudioSource>();
-		m_mouth.playOnAwake = false;
 
-		//player_dialogue_options.Add (new string ("Ask about the key"));
-		//player_dialogue_options.Add (new string ("Exit Conversation"));
+
 
 	}
 
@@ -42,20 +44,29 @@ public class NPC_State : MonoBehaviour {
 			layer2CrntState = anim.GetCurrentAnimatorStateInfo(1);
 		}
 
-		if(Input.GetKey("up"))
-		{
-
-			anim.SetBool ("talk_now",true);
-			print ("up");
-		}
-
 		rigidbody.MovePosition (rigidbody.position + (move_speed * move_direction) * Time.deltaTime);
+
+		Speak();
 
 	}
 
 	void OnAnimatorMove()
 	{
 
+	}
+
+	void Speak()
+	{
+		Debug.Log ("Called Speak");
+		Debug.Log (is_talking);
+		if(is_talking)
+		{
+			//m_mouth.PlayOneShot(m_voice,1);
+			//m_voice = (AudioClip)Resources.Load ("Unicorn", typeof(AudioClip));
+			m_mouth.clip = m_voice;
+			m_mouth.Play();
+			is_talking = false;
+		}
 	}
 
 	void moveCharacter(float speed, Vector3 direction)

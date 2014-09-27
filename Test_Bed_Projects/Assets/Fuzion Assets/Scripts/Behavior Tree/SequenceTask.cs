@@ -19,10 +19,11 @@ public class SequenceTask : Task {
 		foreach(Task tChild in child_list)
 		{
 
-			if ((tChild.run()))
+			if (!(tChild.run()))
 			{
 				return false;
 			}
+
 		}
 			
 	  return true;
